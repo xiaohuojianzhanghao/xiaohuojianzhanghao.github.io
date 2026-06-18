@@ -1,0 +1,34 @@
+# Jekyll 配置文件
+title: 美区 Apple ID & Shadowrocket 账号出售
+description: 专业出售美区 Apple ID，Shadowrocket 小火箭账号下载，共享账号服务
+author: Shadowrocket Store
+email: support@shadowrocket-store.com
+url: https://xiaohuojianID.github.io
+baseurl: ""
+
+# 主题设置
+theme: minima
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 语言设置
+lang: zh-CN
+
+# 其他配置
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# 分页
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# 排除文件
+exclude:
+  - .gitignore
+  - README.md
+  - website_plan.md
