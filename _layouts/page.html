@@ -1,0 +1,133 @@
+---
+layout: default
+---
+
+<section class="py-20">
+  <div class="max-w-4xl mx-auto px-4">
+    <h1 class="text-4xl font-bold mb-4 gradient-text">{{ page.title }}</h1>
+    <div class="divider"></div>
+    
+    <div class="prose prose-lg max-w-none">
+      {{ content }}
+    </div>
+  </div>
+</section>
+
+<style>
+.prose {
+  color: #333;
+}
+
+.prose h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #667eea;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.prose strong {
+  color: #333;
+  font-weight: 700;
+}
+
+.prose a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.prose a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.prose table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.prose table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.prose table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.prose table tbody tr:hover {
+  background: #f5f7fa;
+}
+
+.prose blockquote {
+  border-left: 5px solid #667eea;
+  padding-left: 1.5rem;
+  margin-left: 0;
+  margin-bottom: 1rem;
+  color: #666;
+  font-style: italic;
+}
+
+.prose code {
+  background: #f5f7fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  color: #d63384;
+  font-family: 'Courier New', monospace;
+}
+
+.prose pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.prose pre code {
+  background: none;
+  color: #f8f8f2;
+  padding: 0;
+}
+</style>
