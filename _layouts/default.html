@@ -17,34 +17,23 @@
 <body>
   <!-- 导航栏 -->
   <nav class="navbar">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold text-white">
-        <a href="/" class="flex items-center gap-2">
-          <span>🚀</span>
-          <span>Shadowrocket</span>
-        </a>
-      </div>
+    <div class="navbar-content">
+      <a href="/" class="navbar-brand">
+        <span>🚀</span>
+        <span>Shadowrocket</span>
+      </a>
       
-      <div class="hidden md:flex gap-8">
-        <a href="/" class="hover:text-yellow-300 transition">首页</a>
-        <a href="/products" class="hover:text-yellow-300 transition">产品</a>
-        <a href="/faq" class="hover:text-yellow-300 transition">常见问题</a>
-        <a href="/about" class="hover:text-yellow-300 transition">关于我们</a>
-        <a href="/contact" class="hover:text-yellow-300 transition">联系我们</a>
-      </div>
+      <ul class="navbar-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="/products">产品</a></li>
+        <li><a href="/faq">常见问题</a></li>
+        <li><a href="/about">关于我们</a></li>
+        <li><a href="/contact">联系我们</a></li>
+      </ul>
 
-      <button class="mobile-menu-btn md:hidden text-white text-2xl">
+      <button class="mobile-menu-btn">
         <i class="fas fa-bars"></i>
       </button>
-    </div>
-
-    <!-- 移动菜单 -->
-    <div class="nav-links hidden md:hidden bg-gradient-to-b from-purple-700 to-purple-900">
-      <a href="/" class="block px-4 py-2 hover:bg-purple-800">首页</a>
-      <a href="/products" class="block px-4 py-2 hover:bg-purple-800">产品</a>
-      <a href="/faq" class="block px-4 py-2 hover:bg-purple-800">常见问题</a>
-      <a href="/about" class="block px-4 py-2 hover:bg-purple-800">关于我们</a>
-      <a href="/contact" class="block px-4 py-2 hover:bg-purple-800">联系我们</a>
     </div>
   </nav>
 
@@ -55,15 +44,15 @@
 
   <!-- 页脚 -->
   <footer>
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px;">
         <div>
-          <h4 class="text-lg font-bold mb-4">关于我们</h4>
-          <p class="text-gray-300 text-sm">专业的美区 Apple ID 和 Shadowrocket 账号服务提供商。</p>
+          <h4>关于我们</h4>
+          <p style="text-align: left; color: #ccc;">专业的美区 Apple ID 和 Shadowrocket 账号服务提供商。</p>
         </div>
         <div>
-          <h4 class="text-lg font-bold mb-4">快速链接</h4>
-          <ul class="text-sm space-y-2">
+          <h4>快速链接</h4>
+          <ul style="list-style: none; padding: 0; text-align: left;">
             <li><a href="/">首页</a></li>
             <li><a href="/products">产品</a></li>
             <li><a href="/faq">常见问题</a></li>
@@ -71,8 +60,8 @@
           </ul>
         </div>
         <div>
-          <h4 class="text-lg font-bold mb-4">支持</h4>
-          <ul class="text-sm space-y-2">
+          <h4>支持</h4>
+          <ul style="list-style: none; padding: 0; text-align: left;">
             <li><a href="/faq">帮助中心</a></li>
             <li><a href="/contact">技术支持</a></li>
             <li><a href="#">隐私政策</a></li>
@@ -80,8 +69,8 @@
           </ul>
         </div>
         <div>
-          <h4 class="text-lg font-bold mb-4">联系方式</h4>
-          <ul class="text-sm space-y-2">
+          <h4>联系方式</h4>
+          <ul style="list-style: none; padding: 0; text-align: left;">
             <li>📧 support@shadowrocket-store.com</li>
             <li>💬 24/7 在线客服</li>
             <li>🌐 Telegram: @shadowrocket_store</li>
@@ -89,17 +78,17 @@
         </div>
       </div>
 
-      <div class="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
+      <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px; color: #aaa; font-size: 14px;">
         <p>&copy; 2024 Shadowrocket 账号出售中心. 保留所有权利。</p>
-        <p class="mt-2">Made with <span class="text-red-500">❤</span> by Manus AI</p>
+        <p style="margin-top: 10px;">Made with <span style="color: #ff6b6b;">❤</span> by Manus AI</p>
       </div>
     </div>
   </footer>
 
   <!-- 返回顶部按钮 -->
-  <div class="scroll-to-top">
+  <button class="scroll-to-top" id="scrollToTop">
     <i class="fas fa-arrow-up"></i>
-  </div>
+  </button>
 
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>

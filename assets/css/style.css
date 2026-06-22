@@ -1,42 +1,97 @@
-@import url('https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/tailwind.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+/* 导入外部资源 */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
+/* 全局重置 */
 * {
-  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* 全局样式 */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background: #f5f7fa;
 }
 
-/* 导航栏美化 */
+/* 容器 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 导航栏 */
 .navbar {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.navbar a {
-  transition: all 0.3s ease;
-  font-weight: 600;
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: 800;
   color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.navbar a:hover {
+.navbar-brand:hover {
+  color: #ffd700;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a:hover {
   color: #ffd700;
   transform: translateY(-2px);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /* Hero 区域 */
 .hero {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  padding: 100px 20px;
+  padding: 120px 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -75,36 +130,51 @@ body {
   }
 }
 
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .hero h1 {
   font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 20px;
-  position: relative;
-  z-index: 1;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
   font-size: 1.3rem;
   margin-bottom: 30px;
-  position: relative;
-  z-index: 1;
   opacity: 0.95;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
 /* 按钮样式 */
-.btn-primary {
-  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-  color: #333;
+.btn {
   padding: 15px 40px;
   border-radius: 50px;
   font-weight: 700;
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
   border: none;
   cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #333;
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
 }
 
 .btn-primary:hover {
@@ -116,14 +186,7 @@ body {
 .btn-secondary {
   background: rgba(255, 255, 255, 0.2);
   color: white;
-  padding: 15px 40px;
-  border-radius: 50px;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease;
   border: 2px solid white;
-  cursor: pointer;
 }
 
 .btn-secondary:hover {
@@ -132,7 +195,7 @@ body {
   transform: translateY(-3px);
 }
 
-/* 卡片样式 */
+/* 卡片 */
 .card {
   background: white;
   border-radius: 15px;
@@ -153,6 +216,41 @@ body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 特性列表 */
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 50px 0;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.feature-item i {
+  font-size: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.feature-item h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.feature-item p {
+  color: #666;
+  font-size: 0.95rem;
 }
 
 /* 价格卡片 */
@@ -181,6 +279,12 @@ body {
 
 .pricing-card.featured:hover {
   transform: scale(1.05) translateY(-15px);
+}
+
+.pricing-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .pricing-card .price {
@@ -223,40 +327,7 @@ body {
   color: #ffd700;
 }
 
-/* 特性列表 */
-.feature-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin: 50px 0;
-}
-
-.feature-item {
-  text-align: center;
-  padding: 20px;
-}
-
-.feature-item i {
-  font-size: 3rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 15px;
-}
-
-.feature-item h3 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.feature-item p {
-  color: #666;
-  font-size: 0.95rem;
-}
-
-/* 评价区域 */
+/* 评价 */
 .testimonial {
   background: white;
   border-radius: 15px;
@@ -266,37 +337,41 @@ body {
   margin: 20px 0;
 }
 
+.testimonial-stars {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
 .testimonial-author {
   font-weight: 700;
   color: #667eea;
   margin-top: 15px;
 }
 
-.testimonial-stars {
-  color: #ffd700;
-  margin-bottom: 10px;
+/* 页面标题 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-/* 页脚 */
-footer {
-  background: linear-gradient(135deg, #333 0%, #555 100%);
-  color: white;
-  padding: 50px 20px 20px;
-  text-align: center;
+h1 {
+  font-size: 2.5rem;
 }
 
-footer a {
-  color: #ffd700;
-  text-decoration: none;
-  transition: all 0.3s ease;
+h2 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-footer a:hover {
-  color: white;
-  text-decoration: underline;
+h3 {
+  font-size: 1.5rem;
+  color: #667eea;
 }
 
-/* 表格美化 */
+/* 表格 */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -327,51 +402,28 @@ table tbody tr:hover {
   background: #f5f7fa;
 }
 
-/* 响应式设计 */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .pricing-card.featured {
-    transform: scale(1);
-  }
-
-  .pricing-card.featured:hover {
-    transform: scale(1) translateY(-15px);
-  }
-
-  .feature-list {
-    grid-template-columns: 1fr;
-  }
+/* 页脚 */
+footer {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  color: white;
+  padding: 50px 20px 20px;
+  text-align: center;
+  margin-top: 80px;
 }
 
-/* 动画效果 */
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.animate-slide-in {
-  animation: slideInUp 0.6s ease-out;
+footer a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
-/* 渐变文本 */
-.gradient-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
+footer h4 {
+  color: white;
 }
 
 /* 分隔线 */
@@ -399,6 +451,8 @@ table tbody tr:hover {
   transition: all 0.3s ease;
   box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
   z-index: 999;
+  border: none;
+  font-size: 20px;
 }
 
 .scroll-to-top.show {
@@ -408,4 +462,149 @@ table tbody tr:hover {
 .scroll-to-top:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.6);
+}
+
+/* 内容区域 */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-content {
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 1000px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 链接 */
+a {
+  color: #667eea;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #764ba2;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+
+  .pricing-card.featured:hover {
+    transform: scale(1) translateY(-15px);
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .page-content {
+    padding: 20px;
+  }
+}
+
+/* 动画 */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* 梯度文本 */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* 段落样式 */
+p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color: #555;
+}
+
+strong {
+  color: #333;
+  font-weight: 700;
+}
+
+/* 列表 */
+ul, ol {
+  margin-bottom: 15px;
+  padding-left: 30px;
+}
+
+li {
+  margin-bottom: 8px;
+  line-height: 1.8;
+}
+
+/* 代码块 */
+code {
+  background: #f5f7fa;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #d63384;
+  font-family: 'Courier New', monospace;
+}
+
+blockquote {
+  border-left: 5px solid #667eea;
+  padding-left: 20px;
+  margin-left: 0;
+  margin-bottom: 15px;
+  color: #666;
+  font-style: italic;
 }

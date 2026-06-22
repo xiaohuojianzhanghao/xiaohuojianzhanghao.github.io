@@ -6,8 +6,8 @@ email: support@shadowrocket-store.com
 url: https://xiaohuojianID.github.io
 baseurl: ""
 
-# 主题设置
-theme: minima
+# 主题设置 - 不使用默认主题，完全自定义
+# theme: minima
 
 # 插件
 plugins:
@@ -32,3 +32,5 @@ exclude:
   - .gitignore
   - README.md
   - website_plan.md
+  - node_modules
+  - vendor
