@@ -201,6 +201,60 @@ layout: default
   </div>
 </section>
 
+<!-- 最新动态 -->
+<section style="padding: 80px 20px; background: white;">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 50px;">📰 最新动态</h2>
+    
+    {% if site.posts.size > 0 %}
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+      {% for post in site.posts limit: 3 %}
+      <div class="card news-card" style="border-left: 5px solid #667eea; display: flex; flex-direction: column;">
+        <!-- 文章分类标签 -->
+        {% if post.category %}
+        <div style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 6px 14px; border-radius: 20px; font-size: 12px; margin-bottom: 12px; font-weight: 600; width: fit-content;">
+          {{ post.category }}
+        </div>
+        {% endif %}
+        
+        <!-- 文章标题 -->
+        <h3 style="margin: 0 0 10px 0; font-size: 1.2rem;">
+          <a href="{{ post.url }}" style="color: #333; text-decoration: none; transition: all 0.3s ease;">
+            {{ post.title }}
+          </a>
+        </h3>
+        
+        <!-- 发布日期 -->
+        <p style="color: #999; font-size: 13px; margin-bottom: 15px;">
+          <i class="fas fa-calendar"></i>
+          {{ post.date | date: "%Y年%m月%d日" }}
+        </p>
+        
+        <!-- 文章摘要 -->
+        <p style="color: #666; margin-bottom: 15px; flex-grow: 1; line-height: 1.6;">
+          {{ post.excerpt | strip_html | truncatewords: 30 }}
+        </p>
+        
+        <!-- 阅读更多链接 -->
+        <a href="{{ post.url }}" style="color: #667eea; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease;">
+          阅读全文
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    
+    <div style="text-align: center;">
+      <a href="/news" class="btn btn-primary">查看所有文章</a>
+    </div>
+    {% else %}
+    <div style="text-align: center; padding: 40px; background: #f5f7fa; border-radius: 10px;">
+      <p style="color: #999; font-size: 16px;">暂时没有新闻文章。敬请期待！</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
 <!-- 客户评价 -->
 <section style="padding: 80px 20px; background: #f5f7fa;">
   <div class="container">
