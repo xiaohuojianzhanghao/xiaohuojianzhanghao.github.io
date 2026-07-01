@@ -18,6 +18,9 @@ plugins:
 # 语言设置
 lang: zh-CN
 
+# 时区设置
+timezone: Asia/Shanghai
+
 # 其他配置
 markdown: kramdown
 kramdown:
