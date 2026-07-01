@@ -1,140 +1,151 @@
-## Shadowrocket下载与小火箭账号常见问题
+# Shadowrocket 账号出售中心
 
-随着越来越多 iPhone 和 iPad 用户开始使用 Shadowrocket（小火箭），关于 Shadowrocket下载、小火箭账号、小火箭共享账号以及小火箭独享账号等问题的搜索热度也在不断增长。很多用户第一次接触 Shadowrocket 时，都会遇到下载、安装以及账号使用方面的疑问。
+这是一个使用 Jekyll 搭建的静态网站，专门用于出售美区 Apple ID 和 Shadowrocket 小火箭账号。
 
+## 项目概述
 
-### Shadowrocket下载需要付费吗？
+该网站提供以下服务：
 
-Shadowrocket 是 App Store 上的一款付费应用，因此正常情况下需要使用已经购买过 Shadowrocket 的 Apple ID 才能下载安装。
+- **美区 Apple ID 出售** - 全新注册的美区 Apple ID，支持修改密码，永久使用
+- **Shadowrocket 共享账号** - 已购 Shadowrocket 的共享账号，即买即用
+- **24/7 客服支持** - 专业的客服团队随时准备帮助您
 
-对于首次使用的用户来说，最常见的搜索内容包括 Shadowrocket下载、小火箭下载、Shadowrocket安装教程、小火箭下载安装以及 Shadowrocket App Store 下载等关键词。
+## 网站结构
 
-下载安装完成后，用户即可通过订阅链接、二维码或者手动配置节点的方式开始使用。
+```
+.
+├── _config.yml              # Jekyll 配置文件
+├── index.md                 # 首页
+├── products.md              # 产品详情页
+├── faq.md                   # 常见问题页
+├── contact.md               # 联系我们页
+├── about.md                 # 关于我们页
+├── README.md                # 项目说明文件
+└── website_plan.md          # 网站规划文档
+```
 
-### 什么是小火箭共享账号？
+## 页面说明
 
-小火箭共享账号本质上是已经购买过 Shadowrocket 应用的 Apple ID。
+### 首页 (index.md)
+介绍网站的主要产品和服务，包括美区 Apple ID 和 Shadowrocket 账号的优势和特点。
 
-用户登录 App Store 后，可以直接在已购项目中下载 Shadowrocket，而无需再次支付应用费用。
+### 产品详情页 (products.md)
+详细介绍产品的特点、价格、购买流程和使用说明。
 
-因此很多用户会搜索：
+### 常见问题页 (faq.md)
+回答用户关于购买、使用、技术支持等方面的常见问题。
 
+### 联系我们页 (contact.md)
+提供多种联系方式，包括邮件、在线客服、电话等。
+
+### 关于我们页 (about.md)
+介绍网站的背景、使命、愿景和核心价值观。
+
+## 本地开发
+
+### 环境要求
+
+- Ruby 2.5.0 或更高版本
+- Jekyll 4.0 或更高版本
+- Bundler
+
+### 安装依赖
+
+```bash
+bundle install
+```
+
+### 本地运行
+
+```bash
+bundle exec jekyll serve
+```
+
+访问 `http://localhost:4000` 查看网站。
+
+### 构建网站
+
+```bash
+bundle exec jekyll build
+```
+
+构建后的网站将在 `_site` 目录中。
+
+## 部署到 GitHub Pages
+
+该网站已配置为使用 GitHub Pages 进行自动部署。只需将代码推送到 GitHub 仓库，网站将自动构建和部署。
+
+```bash
+git add .
+git commit -m "Update website"
+git push origin main
+```
+
+## 关键词优化
+
+网站针对以下关键词进行了优化：
+
+- 美区 Apple ID
+- Shadowrocket
+- 小火箭
+- 美区账号
+- Shadowrocket 账号下载
 - 小火箭共享账号
-- Shadowrocket共享账号
-- 小火箭共享ID
-- Shadowrocket共享ID
-- 小火箭账号共享
-- 小火箭共享账号网站
+- Apple 美区账号
+- 美区 App Store 账号
+- iOS 翻墙工具
 
-共享账号通常仅用于下载应用，下载完成后即可退出账号并切换回自己的 Apple ID。
+## 技术栈
 
-### 什么是小火箭独享账号？
+- **静态网站生成器** - Jekyll 4.3.2
+- **主题** - Minima
+- **部署平台** - GitHub Pages
+- **语言** - Markdown
 
-相比共享账号，小火箭独享账号是专门提供给单个用户长期使用的 Apple ID。
+## 插件
 
-独享账号具有以下特点：
+- jekyll-feed - 生成 RSS 订阅源
+- jekyll-seo-tag - SEO 标签优化
 
-- 不与其他用户共享
-- 安全性更高
-- 稳定性更好
-- 支持修改资料
-- 适合长期使用
+## 自定义
 
-因此很多用户也会搜索小火箭独享账号、Shadowrocket独享账号、小火箭美区账号以及 Shadowrocket账号购买等相关内容。
+### 修改网站标题和描述
 
-### 小火箭共享账号安全吗？
+编辑 `_config.yml` 文件中的以下字段：
 
-这是许多用户最关心的问题之一。
+```yaml
+title: 美区 Apple ID & Shadowrocket 账号出售
+description: 专业出售美区 Apple ID，Shadowrocket 小火箭账号下载，共享账号服务
+```
 
-一般来说，共享账号主要用于登录 App Store 下载应用，因此建议：
+### 修改主题
 
-1. 仅登录 App Store；
-2. 不登录 iCloud；
-3. 不修改账号资料；
-4. 下载完成后及时退出账号；
-5. 不开启查找我的 iPhone 功能。
+编辑 `_config.yml` 文件中的 `theme` 字段，选择其他 Jekyll 主题。
 
-按照正常方式使用，共享账号的风险相对较低。
+### 添加新页面
 
-### 小火箭共享账号和独享账号哪个好？
+在根目录创建新的 Markdown 文件，例如 `privacy.md`，并添加以下 Front Matter：
 
-实际上两种方式适合不同用户。
+```yaml
+---
+layout: page
+title: 隐私政策
+permalink: /privacy/
+---
+```
 
-如果只是临时下载 Shadowrocket：
+## 许可证
 
-小火箭共享账号通常更加划算。
+该项目采用 MIT 许可证。详见 LICENSE 文件。
 
-如果需要长期稳定使用：
+## 联系方式
 
-小火箭独享账号会是更好的选择。
+- 邮件: support@shadowrocket-store.com
+- 网站: https://xiaohuojianID.github.io
 
-因此很多人在搜索小火箭共享账号和小火箭独享账号时，本质上是在比较两者之间的区别和适用场景。
+## 更新日志
 
-### Shadowrocket共享账号网站如何选择？
-
-目前网络上存在许多提供小火箭账号的平台。
-
-选择时建议关注以下几点：
-
-- 是否长期运营
-- 是否提供售后服务
-- 是否支持补发
-- 是否有详细使用教程
-- 用户评价是否良好
-
-一个稳定的平台往往能够减少后续使用过程中的各种问题。
-
-### Shadowrocket下载后如何配置？
-
-完成 Shadowrocket 下载后，通常只需要以下几个步骤：
-
-#### 第一步：安装应用
-
-通过已购账号在 App Store 中下载安装 Shadowrocket。
-
-#### 第二步：导入订阅
-
-复制订阅链接导入 Shadowrocket。
-
-#### 第三步：更新节点
-
-点击更新订阅获取最新节点信息。
-
-#### 第四步：开启连接
-
-选择节点后启动代理即可开始使用。
-
-对于大多数新手用户来说，订阅链接导入是最简单快捷的配置方式。
-
-### 为什么这么多人搜索小火箭账号？
-
-近年来，关于 Shadowrocket下载、小火箭账号、小火箭共享ID、小火箭共享账号网站以及 Shadowrocket共享账号等关键词的搜索量持续增长。
-
-主要原因包括：
-
-- iPhone 用户数量不断增加；
-- Shadowrocket 功能丰富；
-- 支持多种代理协议；
-- 配置简单；
-- 使用教程丰富；
-- 用户群体庞大。
-
-因此 Shadowrocket 目前仍然是许多 iOS 用户经常使用的网络工具之一。
-
-## Shadowrocket相关问题
-
-如果您正在寻找以下内容：
-
-- Shadowrocket下载教程
-- 小火箭账号购买指南
-- 小火箭共享账号推荐
-- 小火箭独享账号介绍
-- Shadowrocket共享账号网站
-- 小火箭共享ID使用方法
-- Shadowrocket安装教程
-- 小火箭配置教程
-- Shadowrocket订阅导入教程
-- 小火箭常见问题解决方案
-
-本项目将持续更新相关教程和使用指南，帮助用户快速了解并使用 Shadowrocket。 
-官网：https://xiaohuojianid.github.io/  下单地址：http://shop.xinkonyun.cc/
+### v1.0.0 (2024-06-18)
+- 初始版本发布
+- 完成首页、产品详情、常见问题、联系我们、关于我们等主要页面
+- 配置 Jekyll 和 GitHub Pages 部署

@@ -1,0 +1,14 @@
+# robots.txt for Shadowrocket Store
+User-agent: *
+Allow: /
+
+# 禁止爬取某些目录
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+
+# 指向 sitemap
+Sitemap: https://xiaohuojianID.github.io/sitemap.xml
+
+# 爬虫延迟（毫秒）
+Crawl-delay: 1

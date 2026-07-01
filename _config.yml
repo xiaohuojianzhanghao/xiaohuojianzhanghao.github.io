@@ -13,6 +13,7 @@ baseurl: ""
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # 语言设置
 lang: zh-CN
@@ -22,6 +23,9 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+# 确保所有日期的文章都会被发布
+future: true
 
 # 分页
 paginate: 10
