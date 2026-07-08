@@ -8,7 +8,7 @@ Disallow: /private/
 Disallow: /.git/
 
 # 指向 sitemap
-Sitemap: https://xiaohuojianID.github.io/sitemap.xml
+Sitemap: https://xiaohuojianzhanghao.github.io/sitemap.xml
 
 # 爬虫延迟（毫秒）
 Crawl-delay: 1

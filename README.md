@@ -141,7 +141,7 @@ permalink: /privacy/
 ## 联系方式
 
 - 邮件: support@shadowrocket-store.com
-- 网站: https://xiaohuojianID.github.io
+- 网站: https://xiaohuojianzhanghao.github.io
 
 ## 更新日志
 

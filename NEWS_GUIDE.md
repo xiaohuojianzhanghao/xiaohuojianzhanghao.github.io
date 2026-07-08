@@ -72,7 +72,7 @@ excerpt: 文章摘要（会在列表页显示）
    ```
 
 3. 等待 GitHub Pages 重新构建（通常 1-2 分钟）
-4. 访问 [https://xiaohuojianID.github.io/news](https://xiaohuojianID.github.io/news) 查看您的文章
+4. 访问 [https://xiaohuojianzhanghao.github.io/news](https://xiaohuojianzhanghao.github.io/news) 查看您的文章
 
 ---
 
