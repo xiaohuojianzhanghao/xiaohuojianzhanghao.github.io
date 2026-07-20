@@ -158,6 +158,12 @@ popupCloseBtn.addEventListener('click', function(e) {
 e.stopPropagation();
 popupOverlay.classList.remove('show');
 });
+// 点击遮罩层关闭弹窗
+popupOverlay.addEventListener('click', function(e) {
+if (e.target === popupOverlay) {
+popupOverlay.classList.remove('show');
+}
+});
 })();
 </script>
 
