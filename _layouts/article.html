@@ -1,0 +1,73 @@
+---
+layout: default
+---
+<div class="article-layout">
+  <article class="article-page card">
+    <span class="pill">{{ page.category | default: '使用文章' }}</span>
+    <h1>
+      {{ page.title }}
+    </h1>
+    <p class="article-date">
+      更新于 {{ page.date | date: '%Y-%m-%d' }}
+    </p>
+    {% if page.tags %}
+    <div class="article-tags">
+      {% for t in page.tags %}<span class="tag-chip">{{ t }}</span>{% endfor %}
+    </div>
+    {% endif %}
+    <div class="article-content">
+      {{ content }}
+    </div>
+  </article>
+  <aside class="article-sidebar">
+    {% assign detail = site.pages | where: "path", "shadowrocket-account-detail.md" | first %}{% if detail.products %}
+    <div class="side-card">
+      <div class="side-head">
+        <span class="pill">商品信息</span>
+        <h2>
+          Shadowrocket 账号
+        </h2>
+      </div>
+      <div class="side-products">
+        {% for p in detail.products limit: 3 %}<a class="side-product" href="{{ '/shadowrocket-account-detail/' | relative_url }}"><span class="sp-country">{{ p.country }}</span><b>{{ p.name }}</b><em>{{ p.price }}</em></a>{% endfor %}
+      </div>
+      <a class="side-more" href="{{ '/shadowrocket-account-detail/' | relative_url }}">查看全部商品 →</a>
+    </div>
+    {% endif %}{% assign review = site.pages | where: "path", "shared-account-review.md" | first %}{% if review.scores %}
+    <div class="side-card">
+      <div class="side-head">
+        <span class="pill">网站测评</span>
+        <h2>
+          小火箭共享账号网站测评
+        </h2>
+      </div>
+      <div class="side-scores">
+        {% for s in review.scores %}
+        <div class="side-score">
+          <div class="score-line">
+            <span>{{ s.name }}</span><b>{{ s.score }}</b>
+          </div>
+          <div class="score-bar">
+            <i style="width:{% if s.score >= 4.8 %}96{% elsif s.score >= 4.6 %}88{% elsif s.score >= 4.4 %}80{% else %}70{% endif %}%"></i>
+          </div>
+          <small>{{ s.note }}</small>
+        </div>
+        {% endfor %}
+      </div>
+      <a class="side-more" href="{{ '/shared-account-review/' | relative_url }}">查看完整测评 →</a>
+    </div>
+    {% endif %}{% if page.tags %}
+    <div class="side-card">
+      <div class="side-head">
+        <span class="pill">标签</span>
+        <h2>
+          相关关键词
+        </h2>
+      </div>
+      <div class="side-tags">
+        {% for t in page.tags %}<span>{{ t }}</span>{% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </aside>
+</div>
