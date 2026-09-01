@@ -4,16 +4,21 @@ url: "https://xiaohuojianzhanghao.github.io"
 baseurl: ""
 lang: zh-CN
 markdown: kramdown
-permalink: /:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title.html
 collections:
   articles:
     output: true
-    permalink: /:year/:month/:day/:title/
+    permalink: /:year/:month/:day/:title.html
 defaults:
   - scope:
       path: ""
     values:
       layout: default
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
   - README.md
