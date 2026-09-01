@@ -1,0 +1,188 @@
+---
+layout: default
+---
+<section class="detail-hero card">
+  <span class="pill">{{ page.badge }}</span>
+  <h1>
+    {{ page.title }}
+  </h1>
+  <p>
+    {{ page.intro }}
+  </p>
+  <div class="tag-row">
+    <span>✓ 原创内容说明</span><span>⊘ 不提供交易或凭据</span>
+  </div>
+</section>
+{% if page.rankings %}
+<section class="card rank-card">
+  <div class="section-heading">
+    <span class="pill">网站榜单</span>
+    <h2>
+      小火箭共享账号榜单 TOP 10
+    </h2>
+    <p>
+      本站基于统一评价标准整理的模拟账号榜单，仅用于不同共享账号之间的横向参考。
+    </p>
+  </div>
+  <ol class="rank-list">
+    {% for r in page.rankings %}
+    <li class="rank-item">
+      <span class="rank-no">{{ forloop.index }}</span>
+      <div class="rank-info">
+        <b>{{ r.name }}</b><span class="rank-tag">{{ r.region }}</span>
+      </div>
+      <div class="rank-note">
+        {{ r.note }}
+      </div>
+      <div class="rank-stars">
+        {{ r.stars }}
+      </div>
+      <div class="rank-score">
+        {{ r.score }}<small>稳定性 {{ r.stable }}</small>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+  <p class="table-note">
+    以上榜单为本站模拟整理的横向对比数据，页面不提供任何真实账号、密码或交付，仅作阅读参考。
+  </p>
+</section>
+{% endif %}
+{% if page.demo %}
+<section class="demo-card">
+  <div>
+    <span>展示型账号详情</span>
+    <h2>
+      账号详情页展示模式
+    </h2>
+    <p>
+      以下卡片用于展示商品信息、地区和价格排版；演示下单不会创建订单、付款或交付任何资料。
+    </p>
+  </div>
+  <div class="demo-icon">
+    △<b>演示模式</b>
+  </div>
+</section>
+{% endif %}
+{% if page.products %}
+<section class="card product-showcase">
+  <div class="section-heading left">
+    <span class="pill">商品式展示</span>
+    <h2>
+      小火箭共享账号与地区说明
+    </h2>
+    <p>
+      以下产品卡用于展示名称、价格、地区和详情层级；所有价格与按钮均为页面原型，不构成购买或交付。
+    </p>
+  </div>
+  <div class="product-grid">
+    {% for item in page.products %}
+    <article class="product-card">
+      <div class="product-art">
+        <span>{{ item.country }}</span><b>SR</b>
+      </div>
+      <div class="product-copy">
+        <div class="product-meta">
+          <span>{{ item.country }}地区</span><em>展示商品</em>
+        </div>
+        <h3>
+          {{ item.name }}
+        </h3>
+        <p>
+          {{ item.description }}
+        </p>
+        <div class="product-bottom">
+          <strong>{{ item.price }}</strong><button type="button" data-demo-order data-product="{{ item.name | escape }}">演示下单 →</button>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+<section class="card core-card">
+  <div class="section-heading">
+    <span class="eyebrow">✓ 先确认</span>
+    <h2>
+      {{ page.keyword }} 需要先看哪些条件？
+    </h2>
+    <p>
+      下面三张说明卡分别整理最容易混淆的判断问题。
+    </p>
+  </div>
+  <div class="detail-card-grid">
+    {% for item in page.cards %}
+    <article>
+      <div class="icon-box">
+        {{ forloop.index | prepend: '0' }}
+      </div>
+      <h3>
+        {{ item.title }}
+      </h3>
+      <p>
+        {{ item.body }}
+      </p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+<section class="card steps-card">
+  <div>
+    <span class="eyebrow">✓ 阅读与检查</span>
+    <h2>
+      四步核对，<br>比模糊答案更重要。
+    </h2>
+  </div>
+  <ol>
+    {% for item in page.steps %}
+    <li>
+      <span>{{ forloop.index }}</span>
+      <p>
+        {{ item }}
+      </p>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+<section class="safety-card">
+  <div class="safety-symbol">
+    ✓
+  </div>
+  <div>
+    <h2>
+      账户安全提示
+    </h2>
+    <p>
+      Apple 官方建议不要与任何人共享 Apple Account、密码、验证码、恢复密钥或其他账户安全资料。若需共享已购项目，请查看官方功能。<a href="https://support.apple.com/en-us/102614" target="_blank" rel="noreferrer">查看 Apple 官方说明 ↗</a>
+    </p>
+  </div>
+</section>
+<section class="card faq-card">
+  <div class="section-heading">
+    <span class="pill">常见问题</span>
+    <h2>
+      使用帮助
+    </h2>
+    <p>
+      围绕下载、账户、地区与非交易边界的说明。
+    </p>
+  </div>
+  <div class="faq-list">
+    {% for item in page.faqs %}<details{% if forloop.first %} open{% endif %}><summary>{{ item.question }} <span>→</span></summary>
+    <p>
+      {{ item.answer }}
+    </p>
+    </details>{% endfor %}
+  </div>
+</section>
+<section class="related-panel">
+  <div>
+    <span class="pill">继续阅读</span>
+    <h2>
+      相关说明页面
+    </h2>
+  </div>
+  <div>
+    {% for item in page.related %}<a href="{{ item.url | relative_url }}">{{ item.title }} <span>→</span></a>{% endfor %}
+  </div>
+</section>
