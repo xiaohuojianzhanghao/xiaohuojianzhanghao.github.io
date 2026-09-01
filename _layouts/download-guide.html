@@ -1,0 +1,154 @@
+---
+layout: default
+---
+<section class="detail-hero card">
+  <span class="pill">Shadowrocket 下载说明</span>
+  <h1>
+    {{ page.title | default: 'Shadowrocket 下载说明' }}
+  </h1>
+  <p>
+    小火箭（Shadowrocket）是 iOS 平台的应用下载与配置工具。本页整理下载说明、图片教程、注意事项与常见问题，只做资讯整理，不提供下载文件、账户或凭据。
+  </p>
+  <div class="tag-row">
+    <span>✓ 仅 App Store 下载</span><span>⊘ 不提供账户或凭据</span>
+  </div>
+</section>
+<section class="card steps-card tutorial-card">
+  <div>
+    <span class="eyebrow">✓ 使用方法</span>
+    <h2>
+      Shadowrocket<br>图片教程
+    </h2>
+    <p>
+      按以下步骤在 App Store 完成下载与登录，全程只使用 App Store，不进入系统设置。
+    </p>
+  </div>
+  <div class="tutorial-body">
+    <img src="{{ '/img/%E5%B0%8F%E7%81%AB%E7%AE%AD%E8%B4%A6%E5%8F%B7%E5%85%B1%E4%BA%AB%E7%99%BB%E9%99%86%E6%95%99%E7%A8%8B.jpg' | relative_url }}" alt="Shadowrocket 小火箭下载图片教程" loading="lazy">
+    <ol>
+      <li>
+        <span>1</span>
+        <div>
+          <b>打开 App Store</b>
+          <p>
+            在 iPhone / iPad 主屏幕打开 App Store，搜索 "Shadowrocket"。
+          </p>
+        </div>
+      </li>
+      <li>
+        <span>2</span>
+        <div>
+          <b>找到官方应用</b>
+          <p>
+            核对开发者名称与图标，点击获取 / 下载按钮。
+          </p>
+        </div>
+      </li>
+      <li>
+        <span>3</span>
+        <div>
+          <b>仅在 App Store 内登录</b>
+          <p>
+            如需登录 ID，请务必只在 App Store 页面内完成登录，禁止在系统“设置”或“iCloud”中登录。
+          </p>
+        </div>
+      </li>
+      <li>
+        <span>4</span>
+        <div>
+          <b>完成下载</b>
+          <p>
+            下载完成后返回桌面即可使用，无需其他设置。
+          </p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="warn-panel">
+  <div class="warn-card danger">
+    <div class="warn-icon">
+      !
+    </div>
+    <div>
+      <h2>
+        严禁去设置登录
+      </h2>
+      <p>
+        禁止在手机系统的“设置”或“iCloud”中登录 ID。请务必、仅在 App Store 中登录。
+      </p>
+    </div>
+  </div>
+  <div class="warn-card caution">
+    <div class="warn-icon">
+      ⚠
+    </div>
+    <div>
+      <h2>
+        安全操作提醒
+      </h2>
+      <p>
+        如果因为特殊需求必须在设置中登录，一定一定要先手动关闭“查找我的设备”（Find My iPhone），否则造成的任何后果需自行承担。
+      </p>
+    </div>
+  </div>
+</section>
+<section class="card faq-card">
+  <div class="section-heading">
+    <span class="pill">常见问题</span>
+    <h2>
+      下载与登录 FAQ
+    </h2>
+    <p>
+      围绕下载、登录位置与安全操作的常见疑问。
+    </p>
+  </div>
+  <div class="faq-list">
+    <details open><summary>Shadowrocket 在哪里下载？ <span>→</span></summary>
+    <p>
+      仅在 App Store 搜索 “Shadowrocket” 下载，本站不提供任何下载文件、安装包或侧载链接。
+    </p>
+    </details><details><summary>为什么禁止在“设置”或“iCloud”中登录 ID？ <span>→</span></summary>
+    <p>
+      在系统“设置”或“iCloud”中登录共享 ID 可能导致设备被锁、无法退出、数据被同步或账号无法找回等风险。请务必只在 App Store 内登录。
+    </p>
+    </details><details><summary>必须在设置里登录怎么办？ <span>→</span></summary>
+    <p>
+      如因特殊需求必须在设置中登录，一定一定要先手动关闭“查找我的设备”（Find My iPhone），否则造成的任何后果需自行承担。
+    </p>
+    </details><details><summary>下载后无法使用怎么办？ <span>→</span></summary>
+    <p>
+      先核对设备与系统版本是否满足要求，再确认 App Store 地区与开发者公开说明，个人账户问题请交由官方支持渠道处理。
+    </p>
+    </details><details><summary>本站提供账号或代下载吗？ <span>→</span></summary>
+    <p>
+      不提供。本站仅做下载说明、教程与风险提示整理，不提供任何账户、密码、验证码或代下载服务。
+    </p>
+    </details>
+  </div>
+</section>
+{% assign kws = "clash,shadowrocket,小火箭,梯子,节点,机场,v2ray,代理" | split: "," %}{% assign related_count = 0 %}
+<section class="card latest-card">
+  <div class="section-heading">
+    <span class="pill">相关文章</span>
+    <h2>
+      Clash / Shadowrocket 相关文章
+    </h2>
+    <p>
+      底部聚合本站与 Clash、Shadowrocket、节点、机场相关的全部文章。
+    </p>
+  </div>
+  <div class="latest-grid">
+    {% for post in site.posts %}{% assign hit = false %}{% assign title_l = post.title | downcase %}{% for k in kws %}{% if title_l contains k %}{% assign hit = true %}{% endif %}{% endfor %}{% if hit %}{% assign related_count = related_count | plus: 1 %}
+    <article>
+      <span class="latest-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+      <h3>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h3>
+    </article>
+    {% endif %}{% endfor %}
+  </div>
+  <p class="related-count">
+    共 {{ related_count }} 篇相关文章
+  </p>
+</section>
