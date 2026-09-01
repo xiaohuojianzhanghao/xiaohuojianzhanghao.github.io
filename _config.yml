@@ -4,11 +4,11 @@ url: "https://xiaohuojianzhanghao.github.io"
 baseurl: ""
 lang: zh-CN
 markdown: kramdown
-permalink: /:title/
+permalink: /:year/:month/:day/:title/
 collections:
   articles:
     output: true
-    permalink: /:title/
+    permalink: /:year/:month/:day/:title/
 defaults:
   - scope:
       path: ""
