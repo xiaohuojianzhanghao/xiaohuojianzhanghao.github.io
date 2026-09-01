@@ -5,9 +5,9 @@ devices:
   - { name: "Apple Vision", version: "visionOS 1.0+" }
   - { name: "Apple TV", version: "tvOS 17.0+" }
 routes:
-  - { title: "Shadowrocket 下载", body: "下载前先核对设备、系统版本与官方商店条件。", url: "/shadowrocket-download/", tone: "blue" }
+  - { title: "Shadowrocket 下载", body: "下载前先核对设备、系统版本与官方商店条件。", url: "/news/", tone: "blue" }
   - { title: "小火箭独享账号购买", body: "正品小火箭Shadowrocket独享账号，美区Apple ID现货直发。", url: "/products/", tone: "green" }
-  - { title: "小火箭共享ID", body: "小火箭共享ID账号，安全下载Shadowrocket，省心省力。", url: "/shared-id/", tone: "amber" }
+  - { title: "小火箭共享ID", body: "小火箭共享ID账号，安全下载Shadowrocket，省心省力。", url: "/products/", tone: "amber" }
   - { title: "小火箭常见问题", body: "关于小火箭账号购买、下载、使用、安全的常见问题与解答。", url: "/faq/", tone: "pink" }
 products:
   - { country: "美国", name: "Shadowrocket 小火箭美国区 Apple ID", price: "¥38.88", description: "正品美区Apple ID，支持修改密码，永久使用" }
