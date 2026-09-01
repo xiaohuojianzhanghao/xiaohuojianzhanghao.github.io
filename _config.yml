@@ -1,43 +1,19 @@
-# Jekyll 配置文件
-title: Shadowrocket 独享账户出售
-description: 专业出售美区 Apple ID，Shadowrocket 小火箭账号下载，共享账号服务
-author: Shadowrocket Store
-email: support@shadowrocket-store.com
-url: https://xiaohuojianzhanghao.github.io
+title: 小火箭号站｜Shadowrocket共享账号｜小火箭独享账号
+description: 小火箭号站提供Shadowrocket小火箭独享账号、小火箭共享ID、小火箭共享账号、美区Apple ID购买与下载教程，专业的小火箭账号交易平台。
+url: "https://xiaohuojianzhanghao.github.io"
 baseurl: ""
-
-# 主题设置 - 不使用默认主题，完全自定义
-# theme: minima
-
-# 插件
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-# 语言设置
 lang: zh-CN
-
-# 时区设置
-timezone: Asia/Shanghai
-
-# 其他配置
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+permalink: /:title/
+collections:
+  articles:
+    output: true
+    permalink: /:title/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
 
-# 确保所有日期的文章都会被发布
-future: true
-
-# 分页
-paginate: 10
-paginate_path: "/blog/page:num/"
-
-# 排除文件
 exclude:
-  - .gitignore
   - README.md
-  - website_plan.md
-  - node_modules
-  - vendor
