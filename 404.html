@@ -87,9 +87,12 @@
   var m = p.match(/^\d{4}\/\d{2}\/\d{2}\/(.+?)(?:\.html)?$/) ||
          p.match(/^\d{4}-\d{2}-\d{2}-(.+?)(?:-\d+)?(?:\.html)?$/);
   var cand = m ? m[1] : p.replace(/\.html$/, '');
+  var bare = cand.replace(/-\d+$/, '');
   var target = '';
   if (LEGACY[cand]) target = '/' + LEGACY[cand];
   else if (SLUGS.indexOf(cand) >= 0) target = '/' + cand + '/';
+  else if (LEGACY[bare]) target = '/' + LEGACY[bare];
+  else if (SLUGS.indexOf(bare) >= 0) target = '/' + bare + '/';
   if (target) { location.replace(target); return; }
   location.replace('/');
 })();
