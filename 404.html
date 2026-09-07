@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>页面不存在 - 小火箭号站</title>
+<script>
+(function () {
+  var SLUGS = [
+    "ruhexunzhaokeyidakaigugedejiasuqigaoxiaojiejuefangantuijian",
+    "ruhexunzhaoxingjiabigaodejichangjiedianshiyongzhinan",
+    "ruheyongclashgaiipdizhiyiyouhuawangluolianjie",
+    "ruheyouhuaclashdetunmoshipeizhiyihuodegengjiatiyan",
+    "ruheyouhuaclashyamlpeizhiyitishenglianjietiyan",
+    "ruheyouxiaochuliudpzhuanfapingbiduankouwenti",
+    "ruheyouxiaoclashchakanliuliangshiyongqingkuang",
+    "ruheyouxiaodailiraoguoguoneiwangzhandewangluoxianzhi",
+    "ruheyouxiaodiclashchakanduankoubingyouhuashiyongtiyan",
+    "ruheyouxiaodiclashzuzhiyingyonglianwang",
+    "ruheyouxiaodiguandiaoclashdemixinshezhi",
+    "ruheyouxiaodiguanliclashduogepeizhiwenjian",
+    "ruheyouxiaodijinxingclashurltianchongyujiedianguanli",
+    "ruheyouxiaoguanliclashdingyuelianjiebingchakanjiedianxinxi",
+    "ruheyouxiaoguanliclashjiedianpiliangshanchuyuyouhuajiqiao",
+    "ruheyouxiaoguanliclashjiluliulanjiluyujiedianshiyong",
+    "ruheyouxiaoguanliheyingduilanmaovpndanchuangguanggao",
+    "ruheyouxiaohuoquheshiyongjichangtigongdedingyuelianjie",
+    "ruheyouxiaojinxingclashmianfeiurlshezhi",
+    "ruheyouxiaojinxingclashwenjiandaorujiaocheng",
+    "ruheyouxiaoliyongclashforwindowsjinxingwangluolianjie",
+    "ruheyouxiaoliyongclashguanwangyibiaopanguanlinindejiedian",
+    "ruheyouxiaoliyongclashmianfeijiekoujiedian",
+    "ruheyouxiaoliyongheguanlizijidewangluojiedian",
+    "ruheyouxiaoliyongkuaimiaomianfeijiasuqishiyongtiyanyupeizhijianyi",
+    "ruheyouxiaoqiehuandiannaoipdaoguowaishiyong",
+    "ruheyouxiaoshixianfanqiangbubeizhuashiyongjiqiaofenxiang",
+    "ruhezaibutongchangjingxiaxuanzeyigenenghuanipdejiasuqi",
+    "ruhezaibutongdejiedianfuwuzhongzhaodaobingshiyongmianfeizhifeijijiedian",
+    "ruhezaiclashairportofficialsitezhaodaokekaodejiedianfuwu",
+    "ruhezaiclashforwindowslishezhiheshiyongquanjumoshi",
+    "ruhezaimacshanggaoxiaoshiyongclashdexiangjinzhinan",
+    "ruhezaiopenwrtanzhuangclash",
+    "ruhezhaodaokekaodeclashmetaguanwangrukou",
+    "ruhezhaodaokekaodeclashzuixinlianjiebingshunchangshiyong",
+    "ruhezhaodaokekaodefeijijiasuqiguanwangzheliyouzhenshitiyan",
+    "ruhezhaodaokekaodeliangyuandianjichangguanwanglianjieshiyongzhinan",
+    "ruhezhaodaokekaodesanmaojichangwangzhibingjinxingyouxiaopeizhi",
+    "ruhezhaodaokekaodev2mianfeijiedianmeitiangengxin2025fangfayupeizhixiangjie",
+    "ruhezhaodaokekaodexianggangjichangguanwangshouyebingxuanzefuwu",
+    "ruhezhaodaokeyongdeyunshangchonglangbanwangzhipeizhiyujiedianxiangjie",
+    "ruhezhaodaomianfeixianggangjiedianclashdeshiyongfangfa",
+    "ruhezhaodaonengjiasugugedejiasuqimianfeijiedian",
+    "ruhezhaodaonengyongdemianfeijichangshoujifangfayujianyi",
+    "ruhezhaodaoqingyunguanwangclashdezuixinpeizhi",
+    "ruhezhaodaosanmaojichangguanfangwangzhanbinghuoqugaosujiedian",
+    "ruhezhaodaoshihenideclashjiedianfuwu",
+    "ruhezhaodaoshihenidetiktokduxiangjiediandajianfuwu",
+    "ruhezhaodaoshiyongdeclashguizemuban",
+    "ruhezhaodaowendingdeclashguanwangxufeilianjie",
+    "ruhezhaodaowendingdeclashvergewangzhihepeizhijiedian",
+    "ruhezhaodaowendinghaoyongdeclashchangyongjichang",
+    "weishenmebzhanxianzaifanqiangleyekanbuliaogangaotaidiqudefanleduojiaodujieduyujiejuefangan",
+    "weishenmeclashbunengfanqiangleshenrufenxiyukexingjianyi",
+    "weishenmeclashbuxianshidailiduoweidufenxiyujiejuejianyi",
+    "weishenmeclashbuxianshijiedianchangjianyuanyinyujiejuefangan",
+    "weishenmeclashdabukailechangjianyuanyinyupaichazhinan",
+    "weishenmeclashdabukaiquanmianpaichayuchangjianjiejuesilu",
+    "weishenmeclashdaoruhouhaishiwufalianjiejiejuesiluyubuzhou",
+    "weishenmeclashdaorulianjieshibaichangjianyuanyinyupaichafangfa",
+    "weishenmeclashjuyuwangdailiwufashiyong",
+    "weishenmeclashkaiqitunmoshihouwufashangwangkenengyuanyinyujiejuebanfa",
+    "weishenmeclashkaiqitunmoshihuiduanwangyoushenmejiejuebanfa",
+    "weishenmeclashkaitunmoshijiumeiwangchangjianyuanyinhejiejuebanfa",
+    "weishenmeclashlianjiebushangchangjianyuanyinyujiejuebanfa",
+    "weishenmeclashwufaqiehuandaopeizhiwenjianchangjianwentijijiejuesilu",
+    "weishenmeclashwufashangguoneiwangzhanshiyongpaichayujiejuejianyi",
+    "weishenmeclashxdabukaipaichayujiejuezhinan",
+    "weishenmeclashxiazaipeizhishibaiyuanyinyushiyongjiejuesilu",
+    "weishenmetunmoshiyidakaijiuduanwangchangjianyuanyinyujiejuebanfa"
+  ];
+  var LEGACY = {
+    "product-update":"2024/06/20/product-update.html",
+    "apple-id-security":"2024/06/21/apple-id-security.html",
+    "shadowrocket-guide":"2024/06/22/shadowrocket-guide.html"
+  };
+  var p = location.pathname.replace(/^\/+|\/+$/g, '');
+  var m = p.match(/^\d{4}\/\d{2}\/\d{2}\/(.+?)(?:\.html)?$/) ||
+         p.match(/^\d{4}-\d{2}-\d{2}-(.+?)(?:-\d+)?(?:\.html)?$/);
+  var cand = m ? m[1] : p.replace(/\.html$/, '');
+  var target = '';
+  if (LEGACY[cand]) target = '/' + LEGACY[cand];
+  else if (SLUGS.indexOf(cand) >= 0) target = '/' + cand + '/';
+  if (target) { location.replace(target); return; }
+  location.replace('/');
+})();
+</script>
+</head>
+<body style="font-family:sans-serif;max-width:640px;margin:80px auto;text-align:center">
+<h2>页面不存在或已迁移</h2>
+<p>正在为您跳转到对应页面…</p>
+<p><a href="/">返回小火箭号站首页</a></p>
+</body>
+</html>
